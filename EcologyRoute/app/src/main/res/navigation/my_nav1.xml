@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav1"
+    app:startDestination="@id/splashScreen2">
+
+    <fragment
+        android:id="@+id/splashScreen2"
+        android:name="com.example.ecologyroute.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen2_to_viewPagerFragment2"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashScreen2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.ecologyroute.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeAc"
+            app:destination="@id/homeAc"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <activity
+        android:id="@+id/homeAc"
+        android:name="com.example.ecologyroute.HomeAc"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>
